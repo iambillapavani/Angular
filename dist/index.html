@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta charset='utf-8' />
+    <title>Display a map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+
+  <title>MyApp</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+
+
+  <base href="/">
+
+  <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body style="background-color:lightgreen;">
+  <div style="height: 400px">
+  <app-root></app-root>
+</div>
+  <br>
+  <hr>
+  <hr>
+  <div style="height: 400px">
+  <app-load-map></app-load-map>
+  </div>
+  <div style="height:400px">
+    <app-custom-icons></app-custom-icons>
+  </div>
+  <hr>
+  <br>
+  <div>
+   <app-country></app-country>
+  </div>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
