@@ -1,0 +1,96 @@
+<!doctype html>
+
+      <div>
+      <button type="button" class="btn btn-primary" (click)="getCountries()">GetCountries</button>
+    </div>
+    <div></div>
+
+    <div>
+        <div style="margin:12px 12px 12px 12px ;" class="c">
+              <div>
+                  <label >CountryId</label><span>&nbsp;</span><input type="text" id="ccountryId" [formControl]="ccountryId" /><br>
+                  <label >countryName</label><span>&nbsp;</span><input type="text" id="ccountryName" [formControl]="ccountryName" /><br>
+                  <label >countryPopulation</label><span>&nbsp;</span><input type="text" id="ccountryPopulation" [formControl]="ccountryPopulation"/><br><br>
+                  <button type="submit" class="btn btn-success" style="align-content: center;padding-left: 30px !important;" (click)="addCountry()">Add Country</button>
+              </div>
+          </div>
+    </div>
+
+    <style>
+
+      div.c {
+    position: absolute;
+    width: 200px;
+    padding: 5px;
+    padding-left: 10px;
+    height: 220px;
+    border: solid black;
+} 
+        table, th, td {
+          white-space: nowrap;
+            border: 1px solid black;
+            font-weight: bold; 
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+        }
+        text{
+          width:25%;
+          height:10%;
+        }
+        #showdata {
+          width: 500px;
+            height: 250px;
+        }
+        #showdata tr:nth-child(even){background-color: #f2f2f2;}
+        #showdata tr:hover {background-color: #ddd;}
+        #showdata th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+        }
+        </style>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<ng-container *ngIf="show">
+<div class="container" id="no1" style="width:600px; height:30px;">
+<br/>
+<div class="panel panel-default" >
+			<div class="panel-heading">Show Countries</div>
+			<div class="panel-body">
+            <fieldset class="col-md-6">    	
+					<legend>All Countries</legend>
+					<div class="panel panel-default">
+						<div class="panel-body">
+                <table id="showdata">
+                    <tr>
+                      <th>CountryID</th>
+                      <th>CountryName</th>
+                      <th>population</th>
+                      <th></th>
+                    </tr>
+                    <tr *ngFor="let country of countries" >
+                        <td><input type="text" id="u_countryId" value="{{country.id}}" size="4"/> </td>
+                        <td> <input type="text" id="u_countryName" value="{{country.countryName}}" size="4"/></td>
+                        <td><input type="text" id="u_countryPopulation" value="{{ country.population }}" size="4"/></td>
+                        <td><a (click)="onGoToPage2(country.id)">update</a></td>
+                    </tr>
+                  </table>
+            </div>
+					</div>
+				</fieldset>				
+				<div class="clearfix"></div>
+     </div>
+     </div>
+     </div>
+   
+     </ng-container>
+<br>
+
