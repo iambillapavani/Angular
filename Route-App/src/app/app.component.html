@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Routing and Navigation
+  </h1>
+  <h2>{{title}}</h2>
+  <h5>{{date}}</h5>
+</div>
+
+<div style="position:absolute;">
+    <app-share-data [parentData] ="name " ></app-share-data>
+</div>
+
+<style>
+  a{
+    text-decoration:none;
+    color:#cc0000;
+   }
+   a.button,div.container{
+    float:left;
+   }
+   a.button{
+    background-color:#794f4f;
+    border:1px solid #660000;
+    border-radius:5px;
+    color:#fff;
+    margin-right:10px;
+    padding:10px 10px 10px 10px;
+   }
+</style>
+
+<div id="naviagete" class="navgate" style="border:1px solid red; position:absolute !important; padding:10px; background-color:lightblue;">
+
+ <nav>
+   <div style="background-clor:rgb(102, 167, 42)">
+  <a routerLink='/departments' routerLinkActive="active" >Departments</a><br>
+</div>
+<div>
+  <a routerLink="/employees" routerLinkActive="active" >Employees</a>
+</div>
+</nav>
+</div>
+ <router-outlet></router-outlet>
